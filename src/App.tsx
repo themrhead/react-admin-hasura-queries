@@ -1,24 +1,33 @@
 import React from 'react';
 import { Admin, Resource } from 'react-admin';
-import { TodoList, TodoEdit, TodoCreate } from './todos';
-import { UserList, UserShow } from './users';
-import PostIcon from '@material-ui/icons/Book';
-import UserIcon from '@material-ui/icons/Group';
+import {
+  TodosList,
+  TodosCreate,
+  TodosEdit,
+  TodosIcon,
+} from './resources/todos';
+import { UsersList, UsersShow, UsersIcon } from './resources/users';
 
 type AppProps = {
   dataProvider: Function;
 };
+
 function App(props: AppProps) {
   return (
     <Admin dataProvider={props.dataProvider}>
       <Resource
         name="todos"
-        icon={PostIcon}
-        list={TodoList}
-        edit={TodoEdit}
-        create={TodoCreate}
+        icon={TodosIcon}
+        list={TodosList}
+        create={TodosCreate}
+        edit={TodosEdit}
       />
-      <Resource name="users" icon={UserIcon} list={UserList} show={UserShow} />
+      <Resource
+        name="users"
+        icon={UsersIcon}
+        list={UsersList}
+        show={UsersShow}
+      />
     </Admin>
   );
 }

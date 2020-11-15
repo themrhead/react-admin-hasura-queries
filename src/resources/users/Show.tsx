@@ -1,9 +1,6 @@
 import React from 'react';
 import {
-  List,
-  Filter,
   Datagrid,
-  TextInput,
   TextField,
   DateField,
   BooleanField,
@@ -14,22 +11,6 @@ import {
   TopToolbar,
   ListButton,
 } from 'react-admin';
-
-const UserFilter = (props: object) => (
-  <Filter {...props}>
-    <TextInput label="Search by Name" source="name" alwaysOn />
-  </Filter>
-);
-
-export const UserList = (props: object) => (
-  <List filters={<UserFilter />} bulkActionButtons={false} {...props}>
-    <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <DateField source="created_at" label="Created At" />
-    </Datagrid>
-  </List>
-);
 
 const UserTitle = ({ record }: { record?: { name: string } }) => {
   return <span>User: {record ? `${record.name}` : ''}</span>;
@@ -47,7 +28,7 @@ const UserShowActions = ({
   </TopToolbar>
 );
 
-export const UserShow = (props: object) => (
+export const UsersShow = (props: object) => (
   <Show title={<UserTitle />} actions={<UserShowActions />} {...props}>
     <TabbedShowLayout>
       <Tab label="summary">
@@ -68,3 +49,5 @@ export const UserShow = (props: object) => (
     </TabbedShowLayout>
   </Show>
 );
+
+export default UsersShow;
