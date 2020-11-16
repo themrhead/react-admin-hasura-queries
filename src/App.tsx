@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Admin, Resource } from 'react-admin';
+import buildHasuraProvider from 'ra-data-hasura-graphql';
 import {
   TodosList,
   TodosCreate,
@@ -8,13 +9,24 @@ import {
 } from './resources/todos';
 import { UsersList, UsersShow, UsersIcon } from './resources/users';
 
-type AppProps = {
-  dataProvider: Function;
-};
+const GRAPHQL_URI = 'https://low-code-api.herokuapp.com/v1/graphql';
 
-function App(props: AppProps) {
+const clientOptions = { uri: GRAPHQL_URI };
+
+function App() {
+  const [dataProvider, setDataProvider] = useState<null | Function>(null);
+
+  useEffect(() => {
+    const buildDataProvider = async () => {
+      const dataProvider = await buildHasuraProvider({ clientOptions });
+      setDataProvider(() => dataProvider);
+    };
+    buildDataProvider();
+  }, []);
+
+  if (!dataProvider) return <p>Loading...</p>;
   return (
-    <Admin dataProvider={props.dataProvider}>
+    <Admin dataProvider={dataProvider}>
       <Resource
         name="todos"
         icon={TodosIcon}
