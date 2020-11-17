@@ -94,7 +94,7 @@ declare module 'ra-data-hasura-graphql' {
     parseResponse: ({ data }: any) => { data: any; total?: number };
   };
 
-  type BuildFields = (type: ResourceType) => any[];
+  type BuildFields = (type: ResourceType, fetchType: FetchType) => any[];
   type BuildMetaArgs = (
     q: InstrospectionQuery,
     v: object,
@@ -164,6 +164,7 @@ declare module 'ra-data-hasura-graphql' {
   };
 
   export default function (
-    options: Options
+    options: Options,
+    buildFields?: buildFields
   ): Promise<(f: FetchType, r: ResourceType, params: object) => { data: any }>;
 }
