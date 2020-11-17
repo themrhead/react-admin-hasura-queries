@@ -8,6 +8,7 @@ import {
   TodosIcon,
 } from './resources/todos';
 import { UsersList, UsersShow, UsersIcon } from './resources/users';
+import customBuildFields from './custom-build-fields';
 
 const GRAPHQL_URI = 'https://low-code-api.herokuapp.com/v1/graphql';
 
@@ -18,7 +19,10 @@ function App() {
 
   useEffect(() => {
     const buildDataProvider = async () => {
-      const dataProvider = await buildHasuraProvider({ clientOptions });
+      const dataProvider = await buildHasuraProvider(
+        { clientOptions },
+        { buildFields: customBuildFields }
+      );
       setDataProvider(() => dataProvider);
     };
     buildDataProvider();

@@ -6,7 +6,6 @@ import {
   TextField,
   ReferenceField,
   BooleanField,
-  DateField,
   ReferenceInput,
   BooleanInput,
   SelectInput,
@@ -32,7 +31,6 @@ const TodoList = (props: object) => (
         <TextField source="name" />
       </ReferenceField>
       <BooleanField source="is_completed" label="Completed?" />
-      <DateField source="created_at" />
     </Datagrid>
   </List>
 );
