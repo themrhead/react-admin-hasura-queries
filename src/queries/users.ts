@@ -1,10 +1,8 @@
 import gql from 'graphql-tag';
 
-export const GET_LIST_USERS = gql`
+// Only the extra fields for the query.
+export const GET_LIST_USERS_EXTENSION = gql`
   {
-    id
-    name
-    created_at
     todos(
       where: { is_completed: { _eq: false } }
       order_by: { created_at: asc }
