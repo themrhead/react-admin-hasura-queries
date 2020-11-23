@@ -6,6 +6,8 @@ It uses [ra-data-hasura-graphql](https://github.com/Steams/ra-data-hasura-graphq
 
 This repository is forked from [react-admin-low-code](https://github.com/cpursley/react-admin-low-code), using the same Hasura GraphQL backend, but allowing for custom queries to be specified by the React Admin client instead of relying on the default generated queries.
 
+**Note:** currently this demo app is using a locally built version of the `ra-data-hasura-graphql` package, but if [this PR](https://github.com/Steams/ra-data-hasura-graphql/pull/68) is merged then it will be able to use the `npm` version of the package as usual.
+
 ## Getting started
 
 1. `yarn` to install dependencies
