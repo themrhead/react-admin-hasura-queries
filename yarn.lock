@@ -9438,8 +9438,10 @@ ra-data-graphql@^3.6.1:
     lodash "~4.17.5"
     pluralize "~7.0.0"
 
-ra-data-hasura-graphql@./ra-data-hasura-graphql:
-  version "0.1.12"
+ra-data-hasura@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/ra-data-hasura/-/ra-data-hasura-0.1.0.tgz#f5717bf8d9c1f1a75573fd43a26a9fcd3799d00b"
+  integrity sha512-Q9i5qrxlDEqyCJ160jCrD2vLG4BP1VDFj6dfZGIJ0sHknu/7/dLkAMz3QtlZ98n3i/eL08wkpy2BYAzxbU075g==
   dependencies:
     graphql-ast-types-browser "~1.0.2"
     kind-of ">=6.0.3"

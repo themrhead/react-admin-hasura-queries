@@ -1,6 +1,6 @@
-import { buildFields } from 'ra-data-hasura-graphql';
+import { buildFields } from 'ra-data-hasura';
 import { GET_LIST } from 'react-admin';
-import { ResourceType, FetchType } from 'ra-data-hasura-graphql';
+import { ResourceType, FetchType } from 'ra-data-hasura';
 
 import { GET_LIST_USERS } from './queries/users';
 import { GET_LIST_TODOS } from './queries/todos';
