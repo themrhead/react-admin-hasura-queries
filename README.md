@@ -1,12 +1,10 @@
 # React Admin x Hasura
 
-This is a demo application showing how to use [ra-data-hasura-graphql](https://github.com/Steams/ra-data-hasura-graphql) to build a [react-admin](https://marmelab.com/react-admin/) application backed by a [Hasura](https://hasura.io/) GraphQL API. You can take a look at the app <a href="https://sad-shirley-5af596.netlify.app">here</a>.
+This is a demo application showing how to use [ra-data-hasura](https://github.com/hasura/ra-data-hasura) to build a [react-admin](https://marmelab.com/react-admin/) application backed by a [Hasura](https://hasura.io/) GraphQL API. You can take a look at the app <a href="https://sad-shirley-5af596.netlify.app">here</a>.
 
-It uses [ra-data-hasura-graphql](https://github.com/Steams/ra-data-hasura-graphql) as the React Admin [Data Provider](https://marmelab.com/react-admin/DataProviders.html), and focusses on showing how to write **completely custom GraphQL queries** - just as GraphQL should be used!
+It uses [ra-data-hasura](https://github.com/hasura/ra-data-hasura) as the React Admin [Data Provider](https://marmelab.com/react-admin/DataProviders.html), and focusses on showing how to write **completely custom GraphQL queries** - just as GraphQL should be used!
 
 This repository is forked from [react-admin-low-code](https://github.com/cpursley/react-admin-low-code), using the same Hasura GraphQL backend, but allowing for custom queries to be specified by the React Admin client instead of relying on the default generated queries.
-
-**Note:** currently this demo app is using a locally built version of the `ra-data-hasura-graphql` package, but if [this PR](https://github.com/Steams/ra-data-hasura-graphql/pull/68) is merged then it will be able to use the `npm` version of the package as usual.
 
 ## Getting started
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Admin, Resource } from 'react-admin';
-import buildHasuraProvider from 'ra-data-hasura-graphql';
+import buildHasuraProvider from 'ra-data-hasura';
 import {
   TodosList,
   TodosCreate,

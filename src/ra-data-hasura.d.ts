@@ -1,4 +1,4 @@
-declare module 'ra-data-hasura-graphql' {
+declare module 'ra-data-hasura' {
   import * as apollo from 'apollo-client';
   export enum FetchType {
     GET_LIST = 'GET_LIST',
